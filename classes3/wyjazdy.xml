@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE wyjazdy 
+[
+	<!ELEMENT wyjazdy (dokumenty,samochod,dane,zestawienie,data,wydal,odebral,podpis)>
+
+	<!ELEMENT dokumenty (miejcowosc,dzien)>
+	<!ELEMENT miejcowosc (#PCDATA)>
+	<!ELEMENT dzien (#PCDATA)>
+
+	<!ELEMENT samochod (nr_katalogowy,marka,model)>
+	<!ELEMENT nr_katalogowy (#PCDATA)>
+	<!ELEMENT marka (#PCDATA)>
+	<!ELEMENT model (#PCDATA)>
+
+	<!ELEMENT dane (identyfikator,imie,nazwisko_uzytkownika,stanowisko)>
+	<!ELEMENT identyfikator (#PCDATA)>
+	<!ELEMENT imie (#PCDATA)>
+	<!ELEMENT nazwisko_uzytkownika (#PCDATA)>
+	<!ELEMENT stanowisko (#PCDATA)>
+
+	<!ELEMENT zestawienie (lp+)>
+	<!ELEMENT lp (przebieg,miejsce_wyjazdu,cel)>
+	<!ELEMENT przebieg (#PCDATA)>
+	<!ELEMENT miejsce_wyjazdu (#PCDATA)>
+	<!ELEMENT cel (#PCDATA)>
+
+	<!ELEMENT data (pobrania,zdania)>
+	<!ELEMENT pobrania (dzien_pobrania,godzina_pobrania)>
+	<!ELEMENT dzien_pobrania (#PCDATA)>
+	<!ELEMENT godzina_pobrania (#PCDATA)>
+
+	<!ELEMENT zdania (dzien_zwrotu,godzina_zwrotu)>
+	<!ELEMENT dzien_zwrotu (#PCDATA)>
+	<!ELEMENT godzina_zwrotu (#PCDATA)>
+
+	<!ELEMENT wydal (imie_wydającego,nazwisko)>
+	<!ELEMENT imie_wydającego (#PCDATA)>
+	<!ELEMENT nazwisko (#PCDATA)>
+
+	<!ELEMENT odebral (imie_odbierającego,nazwisko_odbierającego)>
+	<!ELEMENT imie_odbierającego (#PCDATA)>
+	<!ELEMENT nazwisko_odbierającego (#PCDATA)>
+
+	<!ELEMENT podpis (imie_pracownika,nazwisko_pracownika)>
+	<!ELEMENT imie_pracownika (#PCDATA)>
+	<!ELEMENT nazwisko_pracownika (#PCDATA)>
+
+
+	<!ATTLIST lp nr ID #REQUIRED >
+]>
+
+<wyjazdy>
+	<dokumenty>
+		<miejcowosc>Warszawa</miejcowosc>
+		<dzien>2020-03-10</dzien>
+	</dokumenty>
+
+	<samochod>
+		<nr_katalogowy>PG 2044</nr_katalogowy>
+		<marka>Opel</marka>
+		<model>Vectra</model>
+	</samochod>
+	
+	<dane>
+		<identyfikator>PG 2014/I</identyfikator>
+		<imie>Karol</imie>
+		<nazwisko_uzytkownika>Kraszewki</nazwisko_uzytkownika>
+		<stanowisko>Specjalista - działu informatyki</stanowisko>
+	</dane>
+	
+	<zestawienie>
+		<lp nr="id_001">
+			<przebieg>50</przebieg>
+			<miejsce_wyjazdu>Warszawa - Stegny (Centrala)</miejsce_wyjazdu>
+			<cel>Usunięcie awarii sieci</cel>
+		</lp>
+		<lp nr="id_002">
+			<przebieg>100</przebieg>
+			<miejsce_wyjazdu>Grodzisk Maz. (Oddział terenowy)</miejsce_wyjazdu>
+			<cel>Konserwacja serwera</cel>
+		</lp>
+		<lp nr="id_003">
+			<przebieg>80</przebieg>
+			<miejsce_wyjazdu>Warszawa - Bielany (Oddział terenowy)</miejsce_wyjazdu>
+			<cel>Instalacja oprogramowania</cel>
+		</lp>
+	</zestawienie>
+	
+	<data>
+		<pobrania>
+			<dzien_pobrania>2020-03-08</dzien_pobrania>
+			<godzina_pobrania>09:30</godzina_pobrania>
+		</pobrania>
+		<zdania>
+			<dzien_zwrotu>2020-03-08</dzien_zwrotu>
+			<godzina_zwrotu>18:20</godzina_zwrotu>
+		</zdania>
+	</data>
+	
+	<wydal>
+		<imie_wydającego>Andrzej</imie_wydającego>
+		<nazwisko>Stefaniak</nazwisko>
+	</wydal>>
+	
+	<odebral>
+		<imie_odbierającego>Hubert</imie_odbierającego>
+		<nazwisko_odbierającego>Kamionek</nazwisko_odbierającego>
+	</odebral>
+	
+	<podpis>
+		<imie_pracownika>Karol</imie_pracownika>
+		<nazwisko_pracownika>Kraszewski</nazwisko_pracownika>
+	</podpis>
+	
+</wyjazdy>
